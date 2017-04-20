@@ -1,0 +1,9 @@
+python不支持中文字符包括注释和输入输出
+若用中文可用此格式
+开头加
+# -*- coding: utf-8 -*-
+语法为
+print u'中文'
+申明了UTF-8编码并不意味着你的.py文件就是UTF-8编码的，
+必须并且要确保Notepad++正在使用UTF-8 without BOM编码：
+具体为Encoding->Encode in UTF-8 without BOM

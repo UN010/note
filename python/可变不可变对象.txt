@@ -1,0 +1,41 @@
+可变：
+list
+不可变：
+
+dict的key
+eg:   >>> d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+
+set
+eg:   >>> s = set([1, 2, 3])
+
+str
+eg:   >>> a = 'abc'
+      >> a.replace('a', 'A')
+      'Abc'
+      >>> a
+      'abc'
+
+
+
+None：
+eg:(这个牵扯到默认参数知识)
+当你使用默认参数调用时，一开始结果也是对的：
+>>> add_end()
+['END']
+但是，再次调用add_end()时，结果就不对了：
+>>> add_end()
+['END', 'END']
+>>> add_end()
+['END', 'END', 'END']
+定义默认参数要牢记一点：默认参数必须指向不变对象！
+要修改上面的例子，我们可以用None这个不变对象来实现：
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+现在，无论调用多少次，都不会有问题：
+>>> add_end()
+['END']
+>>> add_end()
+['END']
