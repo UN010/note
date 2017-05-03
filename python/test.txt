@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 test
 \n
 test
 huanhang
 \r
 y
+=======
+>>>>>>> parent of 87e576b... upload things
